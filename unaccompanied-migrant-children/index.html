@@ -1,20 +1,124 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Unaccompanied Migrant Children</title>
         <link rel="stylesheet" href = "styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
     </head>
-    <body>
-        <h1>DATA1500 Final Project</h1>
-        <p id = "name">Tabitha Lynn</p>
+    <body>        
+        <h1>An Analysis of Unaccompanied Migrant Children in the United States</h1>
+        <img id="title-image" src="images/children-border.jpg">
+        <p id = "name">By Tabitha Lynn</p>
+        <p id="date">May 1, 2025</p>
         <div class ="divider"></div>
-        <p>This is for DATA150 - Data Visualization and Narrative at Brown University. We are making our first website on Github Pages</p>
-        <img src = "images/rhode_island.png">
-        <p>My project focuses on unaccompanied migrant children in the United States.</p>
-        <h2>About this story</h2>
-        <p>Here's a <a href="https://www.brown.edu/">link</a>. </p>
-        <img src = "images/cards.png" id = "cards-image">
+        
+        <p>
+            Hundreds of thousands of children migrants arrive in the U.S. without adult guardians each year.
+            These children are often fleeing persecution, violence, or economic hardship, arriving 
+            at U.S. borders seeking safety and new opportunities. They are met by immigration authorities, 
+            who place them in detention centers run by the Office of Refugee Resettlement (ORR) until
+            they are either released to sponsors in the U.S. or repatriated to their home countries. 
+        </p>
+        <p>
+            As the Trump Administration continues to crack down on migration and institute stricter 
+            policies, unaccompanied migrant children (UACs) are increasingly vulnerable to long 
+            detention stays and weak legal protections. 
+
+        </p>
+        <p>
+            As of March 2025, the Trump Administration has moved to cut funding to a program that 
+            provides legal representation to tens of thousands of UACs. This leaves thousands of children
+            to represent themselves in court — usually without knowledge of the local language, culture,
+            or law. The United States is the one of few countries that does not guarantee legal counsel 
+            to asylum seekers, including children, and only 56% of UACs in 2023 had representation. 
+        </p>
+        <p>
+            Using data released by the New York Times and originally collected by the U.S. department of 
+            Health Human Services from 2015-2023, this data narrative intends to explore the origins, 
+            demographics, and current locations of children migrating to the United States without an adult. 
+            In doing so, I hope to illuminate the lives and experiences of an extremely vulnerable population 
+            affected by current migration policies.
+        </p>
+        <h3>Where are they coming from?</h3>
+        <img id="bar-chart" src="images/origin-countries.png">
+        <p>
+            From 2015 to 2023, over 550,000 children arrived in the United States without an adult. 
+            Over 90% of these unaccompanied migrant children originate from the Northern Triangle of Central America
+            — Guatemala, Honduras, and El Salvador. While these three countries rank on the most popular 
+            origin countries for migrants at the Southern border overall, notably other top producing 
+            countries, like Mexico, Cuba, and Venezuela come nowhere close. This can likely be attributed to 
+            a high level of violence, corruption, and gang warfare in the Northern Triangle that leave children 
+            at high risk for gang recruitment. Countries in the Northern Triangle have some of the highest child 
+            homicide rates in the world.
+        </p>
+        <h3>What does detainment look like?</h3>
+        <p>
+            After being detained at the border, children are kept in temporary detention centers near the border. 
+            Here, it is determined whether they qualify as unaccompanied children and are separated from adults guardians
+            who are unrelated or deemed dangerous. These detention centers have have stirred controversy, 
+            reports of overcrowding and unsanitary conditions circulating news outlets.
+        </p>
+        <div id="detention-center-images">
+            <img src="images/detention-center1.jpg">
+            <img src="images/detention-center2.jpg">
+            <img src="images/detention-center3.jpg">
+        </div>
+        <p>
+            Once officially deemed UACs, the ORR seeks to release children to sponsors while they await ruling on
+            their legal status and authorization to stay in the United States. These sponsors range from parents and 
+            siblings to completely unrelated adults. It can take a long time for children to placed with appropriate sponsors, 
+            and some children remain in detention for months. 
+    
+        <img id = "lollipop-chart" src="images/detention-length.png">
+        <p>
+            The number of days in detention varies greatly by the type of sponsor the child is released to. For release to
+            parents, the median is by far the smallest compared to all other types of sponsors.
+        </p>
+        <p> 
+            The median time spent in detention is 34 days longer for children released to unrelated sponsors than those  
+            released to mothers or fathers. 75% of children released to unrelated sponsors spent 86 days in detention.
+
+            A <a href="https://www.latimes.com/california/story/2025-04-25/trump-administration-toughens-restrictions-on-families-trying-to-reunite-with-migrant-children">recent investigation</a>
+            has found that tougher processes under the Trump administration have led to longer durations of stay for children, where 
+            policy changes make it more difficult to release children to a vetted sponsor. 
+
+        </p>
+        <h3>Where are they sent once released to sponsors?</h3>
+        <img id="map" src="images/placeholder_map.png">
+        <p>
+            These children are sent all around the United States, many congregating around areas with high migrant 
+            populations. The two most populous counties are Harris County, Texas and Los Angeles County, California. 
+            Both are near the Southern border and have some of the highest immigrant populations in the country.
+        </p>
+        <p>
+            A <a href="https://www.nytimes.com/2023/02/25/us/unaccompanied-migrant-child-workers-exploitation.html">New York Times investigation</a> 
+            found that these unaccompanied children are working some of the most punishing jobs in the country. 
+            Many of them do so to send cash back home to their families abroad, while simultaneously being in debt
+            to sponsors for rent and living expenses. This system of exploitation via sponsor is one perpetuated
+            by poor HHS stuctures, which should be responsible for ensuring sponsors that will support and protect UACs. 
+            HHS's failure to locate UACs once released has sparked controversy in recent years. Although HHS checks on all
+            minors by calling them a month after release to sponsors, the Times reported that they lost immediate contact
+            with a third of the migrant children.
+        </p>
+        <div class ="divider"></div>
+        <p> 
+           
+            As the number of unaccompanied children continues to grow in the U.S., and the policies that support them
+            begin to falter, it is essential to stay informed. This narrative provides a brief overview of unaccompanied 
+            migrant children, but only scratches the surface of their stories and experiences. 
+        </p>
+        <p>
+            For ways to help and to learn more, check out these websites: 
+        </p>
+        <ul > 
+            <li><a href="https://immigrantjustice.org/issues/unaccompanied-immigrant-children">National Immigrant Justice Center</a></li>
+            <li><a href="https://www.savethechildren.org/us/charity-stories/help-migrant-children-at-the-border">Save the Children</a></li>
+            <li><a href="https://supportkind.org/">Kids in Need of Defense</a></li>
+
+        </ul>    
     </body>
+    <script src="scripts/scatter.js"></script>
 </html>

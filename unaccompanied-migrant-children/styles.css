@@ -1,13 +1,8 @@
-img, p, h1, h2, .divider {
+p, h1, h2, h3, .divider, img, ul {
     width: 100%;
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
-}
-
-img {
-    display: block;
-    padding: 15px 0px;
 }
 
 p {
@@ -22,16 +17,61 @@ h1, h2 {
 
 .divider {
     height: 2px;
-    background-color: #0868ac;
+    background-color: navy;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-#name {
-    color: purple;
-    font-weight: bold;
+
+#date {
+    color: gray;
 }
 
-#cards-image {
+#bar-chart {
+    max-width: 640px;
+    display: block;
+    padding: 15px 0px;
+}
+
+#detention-center-images {
     max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 15px 0px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+#detention-center-images img {
+    width: 100%;       
+    max-width: 280px;   
+    flex: 1 1 auto;       /* images can grow/shrink */
+    object-fit: cover; 
+    opacity: 0.4;
+    filter: grayscale(100%);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+#detention-center-images img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+#lollipop-chart {
+    max-width: 900px;
+    display: block;
+    padding: 15px 0px;
+}
+
+#map {
+    max-width: 640px;
+    display: block;
+    padding: 15px 0px;
+}
+
+#title-image {
+    max-width: 640px;
+    display: block;
+    padding: 15px 0px;
 }
