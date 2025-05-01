@@ -19,9 +19,9 @@ h1 {
 
 #subhead {
     text-align: center;
-    font-size: 20px;
+    font-size: 24px;
     font-family: "Source Sans 3";
-    margin-top: -10px;
+    /* margin-top: -10px; */
 }
 
 .divider {
