@@ -57,19 +57,35 @@ h1 {
     flex-wrap: wrap;
 }
 
-#detention-center-images img {
-    width: 100%;       
-    max-width: 280px;   
-    flex: 1 1 auto;       /* images can grow/shrink */
-    object-fit: cover; 
+.image-wrapper {
+    position: relative;
+    max-width: 280px;
+    flex: 1 1 auto;
+}
+
+.image-wrapper img {
+    width: 100%;
+    object-fit: cover;
     opacity: 0.4;
     filter: grayscale(100%);
     transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
-#detention-center-images img:hover {
+.image-wrapper img:hover {
     opacity: 1;
     filter: grayscale(0%);
+}
+
+.caption {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    border-radius: 3px;
+    pointer-events: none;
 }
 
 #lollipop-chart {
